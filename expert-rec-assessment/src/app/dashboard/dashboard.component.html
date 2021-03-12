@@ -1,0 +1,46 @@
+<nb-layout>
+  <nb-layout-header>
+    <div class="layout-header">
+      <div class="" *ngIf="user &&user.given_name"> Welcome {{user.given_name}}</div>
+
+      <div class="float-right logout" title="Logout">
+        <nb-icon icon="power-outline" (click)="logout()"></nb-icon>
+      </div>
+    </div>
+  </nb-layout-header>
+  <nb-layout-column>
+    <nb-card>
+      <nb-card-header class="header">
+
+        <div class="user-img" *ngIf="user &&user.picture">
+          <img src="{{user.picture}}" alt="user image">
+        </div>
+        <div class="" *ngIf="user && user.name">
+          <label>{{user.name}}</label>
+        </div>
+        <div class="location">
+          <nb-icon icon="pin-outline"></nb-icon> <label>Bengaluru, Karnataka</label>
+        </div>
+      </nb-card-header>
+      <nb-card-body>
+  <div class="container-fluid">
+          <div class="row show-grid ">
+            <div class="col-12" *ngIf="user && user.given_name">
+              <label class="about-header">About {{user.given_name}}</label>
+            </div>
+            <div class="col-12">
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+
+  </nb-layout-column>
+
+</nb-layout>

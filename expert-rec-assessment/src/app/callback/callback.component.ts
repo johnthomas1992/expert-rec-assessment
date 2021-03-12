@@ -18,7 +18,7 @@ export class CallbackComponent implements OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe((authResult: NbAuthResult) => {
         if (authResult.isSuccess()) {
-          this.router.navigateByUrl('/pages/dashboard');
+          this.router.navigateByUrl('/dashboard');
         }
       });
   }

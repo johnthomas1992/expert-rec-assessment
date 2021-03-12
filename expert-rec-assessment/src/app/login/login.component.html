@@ -1,1 +1,9 @@
-<button class="btn btn-success" *ngIf="!token" (click)="login()">Sign In with Google</button>
+<div class="login-wrapper">
+     <nb-card>
+        <nb-card-body>
+             <div class="btn" *ngIf="!token" (click)="login()">
+                <span class="icon"></span>
+            </div>
+        </nb-card-body>
+    </nb-card>
+</div>
